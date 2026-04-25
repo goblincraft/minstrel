@@ -1,0 +1,87 @@
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.top-toolbar {
+  background-color: #ffffff;
+  color: #333333;
+  border-bottom: 1px solid #e0e4e8;
+  height: 64px;
+  box-shadow: none;
+  z-index: 2;
+}
+
+.app-brand {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+
+  .brand-icon {
+    color: #1976d2; /* blue */
+    font-size: 28px;
+    height: 28px;
+    width: 28px;
+    margin-right: 8px;
+  }
+
+  .brand-title {
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+  }
+}
+
+.sidenav-container {
+  flex: 1;
+  background-color: #ffffff; /* Main content background */
+}
+
+.app-sidenav {
+  width: 260px;
+  background-color: #f7f9fc; /* Very light blue/gray tint */
+  border-right: 1px solid #e0e4e8;
+}
+
+.nav-list {
+  padding: 16px;
+}
+
+.nav-item {
+  border-radius: 8px;
+  margin-bottom: 4px;
+  color: #5f6368;
+  transition: background-color 0.2s, color 0.2s;
+  
+  ::ng-deep .mat-mdc-list-item-icon {
+    color: #5f6368;
+  }
+
+  &.active-nav-item {
+    background-color: #e6f0fa; /* Light blue selected background */
+    color: #0056b3;
+    
+    ::ng-deep .mat-mdc-list-item-icon {
+      color: #0056b3;
+    }
+    
+    ::ng-deep .mdc-list-item__primary-text {
+      font-weight: 500;
+      color: #0056b3;
+    }
+  }
+
+  &:hover:not(.active-nav-item) {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+}
+
+.main-content {
+  padding: 24px;
+  background-color: #ffffff;
+}

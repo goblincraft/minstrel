@@ -1,0 +1,26 @@
+<div class="layout-container">
+  <mat-toolbar class="top-toolbar">
+    <button mat-icon-button (click)="toggleSidenav()" aria-label="Toggle sidenav">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="app-brand">
+      <mat-icon class="brand-icon">music_note</mat-icon>
+      <span class="brand-title">Minstrel</span>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="sidenav-container" autosize>
+    <mat-sidenav [opened]="isSidenavOpen()" mode="side" class="app-sidenav">
+      <mat-nav-list class="nav-list">
+        <a mat-list-item routerLink="/characters" routerLinkActive="active-nav-item" class="nav-item">
+          <mat-icon matListItemIcon>description</mat-icon>
+          <span matListItemTitle>Character Sheets</span>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="main-content">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
