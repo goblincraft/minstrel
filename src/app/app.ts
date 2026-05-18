@@ -2,10 +2,11 @@ import { Component, signal, OnInit, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { ThemeService } from './core/theme.service';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatSidenavModule],
+  imports: [RouterOutlet, MatSidenavModule, SidebarComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

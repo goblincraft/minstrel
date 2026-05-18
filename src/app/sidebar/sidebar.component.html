@@ -1,0 +1,20 @@
+<div class="sidebar-container" [class.collapsed]="isCollapsed()">
+  <div class="sidebar-header">
+    <button mat-icon-button (click)="toggleSidebar()" [matTooltip]="isCollapsed() ? 'Expand' : 'Collapse'">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+
+  <div class="sidebar-nav">
+    <a mat-button routerLink="/workspace" routerLinkActive="active-link" class="nav-link">
+      <mat-icon>dashboard</mat-icon>
+      <span class="nav-label" *ngIf="!isCollapsed()">Workspace</span>
+    </a>
+  </div>
+
+  <div class="sidebar-footer">
+    <button mat-icon-button (click)="toggleTheme()" [matTooltip]="themeService.isDarkTheme() ? 'Light Mode' : 'Dark Mode'">
+      <mat-icon>{{ themeService.isDarkTheme() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+    </button>
+  </div>
+</div>
